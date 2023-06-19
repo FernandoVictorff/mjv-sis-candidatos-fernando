@@ -12,7 +12,7 @@ public final class TestConstants {
 
 
     public static final String DEFAULT_CANDIDATO_NOME = "Raimundo Nonato Loureiro Castelo Branco";
-    public static final String DEFAULT_CANDIDATO_CPF = "135.217.791-18";
+    public static final String DEFAULT_CANDIDATO_CPF = "13521779118";
     public static final LocalDate DEFAULT_CANDIDATO_DATA_NASCIMENTO = LocalDate.of(2001,9,12);
 
 
