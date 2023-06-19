@@ -14,8 +14,8 @@ public class ContatoDTO {
     private final String celularWhats;
     public static ContatoDTO fromEntity(Contato contato){
         return new ContatoDTO(
-            format("%50s", contato.getEmail().substring(min(contato.getEmail().length(), 50))),
-            format("%010d", isNull(contato.getTelefone()) ? valueOf(0) : valueOf(contato.getTelefone().replaceAll("\\D", ""))),
+            format("%50s", contato.getEmail().substring(0, min(contato.getEmail().length(), 50))),
+            isNull(contato.getTelefone()) ? format("%010d", 0) : contato.getTelefone().replaceAll("\\D", ""),
             format("%11s", contato.getCelular().replaceAll("\\D", "")),
             isNull(contato.getCelular()) ? "0" : (contato.isCelularWhats()) ? "T" : "F"
         );
